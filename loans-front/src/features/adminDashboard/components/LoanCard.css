@@ -1,0 +1,134 @@
+.loan-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  border-left: 4px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+  transition: box-shadow 0.2s;
+}
+
+.loan-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.loan-card.border-red-500 {
+  border-left-color: #ef4444;
+  background-color: #fef2f2;
+}
+
+.loan-card.border-yellow-500 {
+  border-left-color: #eab308;
+  background-color: #fefce8;
+}
+
+.loan-card.border-orange-500 {
+  border-left-color: #f97316;
+  background-color: #fff7ed;
+}
+
+.loan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.loan-person {
+  display: flex;
+  flex-direction: column;
+}
+
+.person-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.indicator-emoji {
+  font-size: 18px;
+}
+
+.person-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #111827;
+}
+
+.person-id {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.loan-financial {
+  margin-bottom: 16px;
+}
+
+.financial-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.label {
+  color: #6b7280;
+}
+
+.value {
+  font-weight: 600;
+}
+
+.value.interest-value {
+  color: #2563eb;
+}
+
+.financial-divider {
+  border-top: 1px solid #e5e7eb;
+  margin: 8px 0;
+}
+
+.total-row .label {
+  font-weight: bold;
+  color: #111827;
+}
+
+.total-row .value {
+  font-size: 20px;
+  font-weight: bold;
+  color: #111827;
+}
+
+.loan-info {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+.loan-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.action-btn {
+  padding: 8px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.action-btn:hover {
+  background-color: #f9fafb;
+}
+
+.action-btn.btn-primary {
+  background-color: #dc2626;
+  color: #ffffff;
+  border-color: #dc2626;
+}
+
+.action-btn.btn-primary:hover {
+  background-color: #b91c1c;
+}

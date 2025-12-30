@@ -1,0 +1,170 @@
+.people-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.people-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.create-person-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.create-person-btn:hover {
+  background: #1d4ed8;
+}
+
+.search-section {
+  margin-bottom: 2rem;
+}
+
+.search-input-container {
+  position: relative;
+  max-width: 500px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+  font-size: 1.125rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 3rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: white;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.people-list-header {
+  margin-bottom: 1.5rem;
+}
+
+.list-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0;
+}
+
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  background: #f9fafb;
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+}
+
+.empty-state-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 0.5rem 0;
+}
+
+.empty-state-content p {
+  color: #6b7280;
+  margin: 0;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.125rem;
+}
+
+.loading {
+  color: #6b7280;
+}
+
+.error {
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+}
+
+.retry-btn {
+  display: block;
+  margin: 1rem auto 0;
+  background: #dc2626;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.retry-btn:hover {
+  background: #b91c1c;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .people-page {
+    padding: 1rem;
+  }
+
+  .people-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .create-person-btn {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .people-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .search-input-container {
+    max-width: 100%;
+  }
+}

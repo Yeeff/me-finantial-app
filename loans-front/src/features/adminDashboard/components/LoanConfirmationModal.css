@@ -1,0 +1,296 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #16a34a;
+  margin: 0;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.close-btn:hover {
+  color: #374151;
+}
+
+.confirmation-body {
+  padding: 1.5rem;
+}
+
+.success-message {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.success-message p {
+  font-size: 1rem;
+  color: #374151;
+  margin: 0 0 1rem 0;
+}
+
+.person-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.person-summary .icon {
+  font-size: 1.5rem;
+  margin-right: 0.75rem;
+}
+
+.person-summary .person-name {
+  font-weight: 500;
+  color: #111827;
+}
+
+.person-summary .person-id {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.loan-details {
+  margin-bottom: 2rem;
+}
+
+.loan-details h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+.link-section,
+.code-section {
+  margin-bottom: 1.5rem;
+}
+
+.input-with-copy {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.readonly-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  background: #f9fafb;
+  color: #374151;
+}
+
+.code-input {
+  font-family: 'Courier New', monospace;
+  text-align: center;
+  font-weight: bold;
+}
+
+.copy-btn {
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.copy-btn:hover {
+  background: #e5e7eb;
+}
+
+.share-section p {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.share-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.share-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.share-btn.whatsapp {
+  background: #25d366;
+  color: white;
+}
+
+.share-btn.whatsapp:hover {
+  background: #128c7e;
+}
+
+.share-btn.email {
+  background: #ea4335;
+  color: white;
+}
+
+.share-btn.email:hover {
+  background: #d33b2c;
+}
+
+.share-btn.sms {
+  background: #6b7280;
+  color: white;
+}
+
+.share-btn.sms:hover {
+  background: #4b5563;
+}
+
+.code-section p {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 1rem 0 0.5rem 0;
+  position: relative;
+}
+
+.code-section p:before,
+.code-section p:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+.code-section p:before {
+  left: 0;
+}
+
+.code-section p:after {
+  right: 0;
+}
+
+.info-section {
+  text-align: center;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.info-section p {
+  margin: 0;
+}
+
+.modal-footer {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  justify-content: space-between;
+}
+
+.secondary-btn,
+.primary-btn {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.secondary-btn {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.secondary-btn:hover {
+  background: #e5e7eb;
+}
+
+.primary-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+.primary-btn:hover {
+  background: #2563eb;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 0.5rem;
+  }
+
+  .modal-content {
+    max-height: 95vh;
+  }
+
+  .share-buttons {
+    flex-direction: column;
+  }
+
+  .modal-footer {
+    flex-direction: column;
+  }
+
+  .secondary-btn,
+  .primary-btn {
+    width: 100%;
+  }
+}

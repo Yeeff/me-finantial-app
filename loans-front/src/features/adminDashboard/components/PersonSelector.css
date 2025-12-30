@@ -1,0 +1,249 @@
+.person-selector {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.question {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #374151;
+}
+
+.search-container {
+  margin-bottom: 1.5rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.loading {
+  text-align: center;
+  padding: 1rem;
+  color: #6b7280;
+}
+
+.people-list {
+  margin-bottom: 1.5rem;
+}
+
+.person-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: white;
+}
+
+.person-item:hover {
+  border-color: #d1d5db;
+  background: #f9fafb;
+}
+
+.person-item.selected {
+  border-color: #dbeafe;
+  background: #eff6ff;
+}
+
+.person-item input[type="radio"] {
+  margin-right: 1rem;
+  transform: scale(1.2);
+}
+
+.person-info {
+  flex: 1;
+}
+
+.person-name {
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+.person-identification {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.person-loans {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.no-results {
+  text-align: center;
+  padding: 2rem;
+  color: #6b7280;
+}
+
+.no-results .create-btn {
+  margin-top: 1rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.no-results .create-btn:hover {
+  background: #2563eb;
+}
+
+.create-person {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.create-person .create-btn {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background-color 0.2s ease;
+}
+
+.create-person .create-btn:hover {
+  background: #e5e7eb;
+}
+
+.create-person-form {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.create-person-form h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.cancel-btn {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.cancel-btn:hover {
+  background: #e5e7eb;
+}
+
+.submit-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.submit-btn:hover {
+  background: #2563eb;
+}
+
+.submit-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.step-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.step-buttons .cancel-btn,
+.step-buttons .continue-btn {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.step-buttons .cancel-btn {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.step-buttons .cancel-btn:hover {
+  background: #e5e7eb;
+}
+
+.step-buttons .continue-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+}
+
+.step-buttons .continue-btn:hover:not(:disabled) {
+  background: #2563eb;
+}
+
+.step-buttons .continue-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
