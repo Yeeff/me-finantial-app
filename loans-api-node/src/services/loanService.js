@@ -1,4 +1,6 @@
-const { Person, Loan, Movement } = require('../models');
+const personRepository = require('../repositories/PersonRepository');
+const loanRepository = require('../repositories/LoanRepository');
+const { Movement } = require('../models');
 const { Op } = require('sequelize');
 
 function generateAccessCode() {
@@ -15,10 +17,10 @@ function generateAccessCode() {
 
 class LoanService {
   async createLoan(personId, initialCapital, interestRate, interestType, startDate, notes) {
-    const person = await Person.findByPk(personId);
+    const person = await personRepository.findById(personId);
     if (!person) throw new Error('Person not found');
 
-    const loan = await Loan.create({
+    const loan = await loanRepository.create({
       personId,
       initialCapital,
       currentCapital: initialCapital,
@@ -34,18 +36,19 @@ class LoanService {
     let existingLoan;
     do {
       accessCode = generateAccessCode();
-      existingLoan = await Loan.findOne({ where: { accessCode } });
+      existingLoan = await loanRepository.findByAccessCode(accessCode);
     } while (existingLoan);
 
-    loan.accessCode = accessCode;
-    loan.accessLink = `https://tuapp.com/loan/${loan.id}`;
-    await loan.save();
+    const updatedLoan = await loanRepository.update(loan.id, {
+      accessCode,
+      accessLink: `https://tuapp.com/loan/${loan.id}`
+    });
 
-    return loan;
+    return updatedLoan;
   }
 
   async getLoan(id) {
-    const loan = await Loan.findByPk(id);
+    const loan = await loanRepository.findById(id);
     if (!loan) throw new Error('Loan not found');
     return loan;
   }
@@ -155,7 +158,7 @@ class LoanService {
   }
 
   async getAllLoans() {
-    return await Loan.findAll();
+    return await loanRepository.findWithPerson();
   }
 }
 

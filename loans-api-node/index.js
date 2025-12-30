@@ -1,5 +1,5 @@
 const { Sequelize } = require('sequelize');
-const sequelize = require('./database');
+const sequelize = require('./src/config/database');
 const app = require('./app');
 
 const PORT = process.env.PORT || 8093;
@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 8093;
 async function startServer() {
   try {
     // Sync database
-    await sequelize.sync({ alter: true }); // Alter tables to match models
+    await sequelize.sync({ force: true }); // Recreate tables (WARNING: This will delete all data)
     console.log('Database synced successfully.');
 
     // Start server
